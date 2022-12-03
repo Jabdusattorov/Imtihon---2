@@ -1,0 +1,237 @@
+.container{
+    width: 95%;
+    margin: 0 auto;
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 35px 0px 25px;
+        position: relative;
+        z-index: 9999;
+        ul{
+            display: none;
+        }
+        img{
+            width: 90px;
+        }
+        .buttons{
+            display: none;
+        }
+        .lang{
+            display: none;
+        }
+
+        .sider{
+            position: relative;
+            display: inline-block;
+            input:checked + .bar{
+                width: 80vw;
+                visibility: visible;
+                opacity: 1;
+            }
+            .bar{
+                position: fixed;
+                z-index: 9999;
+                width: 0px;
+                height: 100vh;
+                left: 0;
+                top: 0;
+                padding: 20px 30px;
+                background-color: rgba(0, 52, 89, 1);
+                transition: all 0.2s linear;
+                opacity: 0;
+                visibility: hidden;
+                .but-x{
+                    text-align: right;
+                    width: 100%;
+                    color: $white;
+                    font-size: xx-large;
+                }
+                ul{
+                    li{
+                        color: $white;
+                        padding-top: 5px;
+                        font-size: 16px;
+                        a{
+                            all: inherit;
+                        }
+                    }
+                    li:nth-child(1){
+                        color: $spec;
+                    }
+                }
+                .form{
+                    background-color: $white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    height: 35px;
+                    border-radius: 20px;
+                    overflow: hidden;
+                    margin-block: 20px;
+                    label{
+                        color: $grey;
+                        padding: 0px 5px 0px 10px;
+                    }
+                    input{
+                        width: 85%;
+                        border: none;
+                        outline: none;
+                    }
+                }
+                a{
+                    color: $white;
+                    background-color: $spec;
+                    width: 100%;
+                    display: block;
+                    height: 35px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 20px;
+                }
+            }
+        }
+        .sider .bar i:active .bar{
+            opacity: 0;
+            visibility: visible;
+            width: 0;
+        }
+    }
+}
+
+@media (min-width:426px) {
+    .container{
+        nav{
+            .sider{
+                input:checked + .bar{
+                    width: 40vw;
+                    opacity: 1;
+                    visibility: visible;
+                }
+                .bar{
+                    width: 40%;
+                }
+            }
+        }
+    }
+}
+@media (min-width:850px) {
+    
+    .container{
+        width: 90%;
+        nav{
+            .navigatsion{
+                display: none;
+            }
+            ul{
+                display: flex;
+                gap: 20px;
+                justify-content: space-between;
+                li{
+                    font-size: 14px;
+                    font-weight: 700;
+                    color: $blue;
+                }
+            }
+            .buttons{
+                display: flex;
+                gap: 10px;
+                .find-group{
+                    background-color: $white;
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    border-radius: 30px;
+                    padding: 10px 10px;
+                    label{
+                        color: $grey;
+                        i{
+                            display: inline-block;
+                        }
+                    }
+                    input{
+                        border: none;
+                        outline: none;
+                        padding-right: 20px;
+                    }
+                }
+                button{
+                    border-radius: 30px;
+                    border: $border;
+                    background-color: $blue;
+                    color: $white;
+                    padding: 0px 20px;
+                    &:active{
+                        background-color: $white;
+                        color: $blue;
+                        border: $border
+                    }
+                }
+            }
+            .lang{
+                display: inline-block;
+                position: relative;
+                label{
+                    color: $blue;
+                }
+                input:checked + .language{
+                    display: block;
+                    accent-color: black;
+                }
+                .language{
+                    display: none;
+                    ul{
+                        display: inline-block;
+                        position: absolute;
+                        right: 0;
+                        background-color: $black;
+                        width: 100px;
+                        border-radius: 2px;
+                        li{
+                            color: $white;
+                            margin: 5px;
+                            padding: 5px;
+                            &:hover{
+                                background-color: #2d353e;
+                            }
+                        }
+                    }
+                }
+                i{
+                    display: inline-block;
+                }
+            }
+            i{
+                display: none;
+            }
+        }
+    }
+}
+@media (min-width:950px) {
+    .container{
+        nav{
+            ul{
+                display: flex;
+                gap: 30px;
+                justify-content: space-between;
+                li{
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: $blue;
+                }
+            }
+        }
+    }
+}
+@media (min-width:1200px) {
+    .container{
+        nav{
+            ul{
+                li{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
