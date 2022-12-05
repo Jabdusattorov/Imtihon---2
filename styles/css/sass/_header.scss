@@ -35,18 +35,26 @@ header{
                         color: $blue;
                         border: $border;
                         background-color: transparent;
-                        &:active{
+                        transition: all 0.2s linear;
+                        &:hover{
                             background-color: $blue;
                             color: white;
+                        }
+                        &:active{
+                            background-color: $dark-blue;
                         }
                     }
                     .but-2{
                         border: $border;
                         background-color: $but-back;
                         color: $white;
-                        &:active{
+                        transition: all 0.2s linear;
+                        &:hover{
                             background-color: $white;
                             color: $blue;
+                        }
+                        &:active{
+                            color: $dark-blue;
                         }
                     }
                 }

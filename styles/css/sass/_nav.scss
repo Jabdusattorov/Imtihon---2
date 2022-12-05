@@ -162,10 +162,14 @@
                     background-color: $blue;
                     color: $white;
                     padding: 0px 20px;
-                    &:active{
+                    transition: all 0.2s linear;
+                    &:hover{
                         background-color: $white;
                         color: $blue;
                         border: $border
+                    }
+                    &:active{
+                        color: $dark-blue;
                     }
                 }
             }

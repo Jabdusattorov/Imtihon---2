@@ -86,9 +86,12 @@ section{
                         color: $blue;
                         border-radius: 30px;
                         padding: 10px 20px;
-                        &:active{
+                        &:hover{
                             background-color: $blue;
                             color: $white;
+                        }
+                        &:active{
+                            background-color: $dark-blue;
                         }
                     }
                 }
