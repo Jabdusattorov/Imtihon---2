@@ -41,12 +41,6 @@
                 transition: all 0.2s linear;
                 opacity: 0;
                 visibility: hidden;
-                .but-x{
-                    text-align: right;
-                    width: 100%;
-                    color: $white;
-                    font-size: xx-large;
-                }
                 ul{
                     li{
                         color: $white;
@@ -89,6 +83,16 @@
                     align-items: center;
                     justify-content: center;
                     border-radius: 20px;
+                }
+            }
+            .bar >{
+                label{
+                    display: inline-block;
+                    padding: 10px 0px 0px;
+                    color: $white;
+                    font-size: 30px;
+                    width: 100%;
+                    text-align: right;
                 }
             }
         }
